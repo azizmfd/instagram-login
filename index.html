@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Connexion - Instagram Clone</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Logo Instagram">
+        </div>
+        <form id="loginForm" class="login-form">
+            <input type="text" placeholder="Nom d'utilisateur" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+        </form>
+        <div class="signup">
+            <p>Vous n'avez pas de compte ? <a href="#">Inscrivez-vous</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+            const username = event.target[0].value; // Récupère le nom d'utilisateur
+            const password = event.target[1].value; // Récupère le mot de passe
+            console.log('Nom d\'utilisateur:', username); // Affiche le nom d'utilisateur dans la console
+            console.log('Mot de passe:', password); // Affiche le mot de passe dans la console
+            alert('Nom d\'utilisateur: ' + username + '\nMot de passe: ' + password); // Affiche une alerte avec les informations
+        });
+    </script>
+</body>
+</html>
